@@ -100,11 +100,10 @@ export const FloatingControls: React.FC<FloatingControlsProps> = ({
           onClick={toggleAudio}
           aria-label={isPlaying ? "Mute Background Music" : "Play Background Music"}
           title={isPlaying ? "Music Playing (Click to mute)" : "Click to play Arabic music"}
-          className={`w-13 h-13 rounded-full flex items-center justify-center transition-all duration-300 shadow-2xl border-2 active:scale-90 cursor-pointer ${
-            isPlaying
+          className={`w-13 h-13 rounded-full flex items-center justify-center transition-all duration-300 shadow-2xl border-2 active:scale-90 cursor-pointer ${isPlaying
               ? "bg-[#8B6B4A] border-[#EAD0B1] shadow-[#8B6B4A]/50 ring-4 ring-[#C4A484]/30 scale-105"
               : "bg-[#8B6B4A]/90 border-[#C4A484]/60 hover:bg-[#8B6B4A] opacity-90"
-          }`}
+            }`}
           style={{ width: "52px", height: "52px" }}
         >
           {isPlaying ? (
