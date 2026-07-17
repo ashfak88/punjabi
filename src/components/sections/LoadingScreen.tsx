@@ -90,9 +90,9 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onEnter }) => {
                 initial={{ opacity: 0, scale: 1.18, filter: "blur(8px)" }}
                 animate={{ opacity: 0.88, scale: 1.03, filter: "blur(0px)" }}
                 transition={{ duration: 3.2, ease: [0.22, 1, 0.36, 1] }}
-                src="/hero-couple.png"
+                src="/hero-couple.jpg"
                 alt="Couple Background"
-                className="w-full h-full object-cover object-center"
+                className="w-full h-full object-cover object-[50%_35%]"
               />
               {/* Soft warm gold/mocha overlay so the image is beautifully visible while text remains high contrast */}
               <div className="absolute inset-0 bg-gradient-to-b from-[#F8F4EF]/75 via-[#F8F4EF]/35 to-[#F8F4EF]/85 pointer-events-none" />

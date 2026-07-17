@@ -44,7 +44,7 @@ export const CoupleSection: React.FC = () => {
             <img
               src={coupleData.image || "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=800&auto=format&fit=crop"}
               alt="Amina & Yusuf"
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              className="w-full h-full object-cover object-[50%_35%] group-hover:scale-105 transition-transform duration-700"
               loading="lazy"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#8B6B4A]/30 via-transparent to-transparent pointer-events-none" />

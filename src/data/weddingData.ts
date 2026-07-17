@@ -5,14 +5,14 @@ export const coupleData = {
   brideShort: "Amina",
   brideTitle: "Daughter of Mr. Tariq Al-Mansoor & Mrs. Zaynab Al-Mansoor",
   brideBio: "A compassionate soul with a deep love for art, Islamic heritage, and kindness towards all. Amina brings warmth and light into every room she enters.",
-  bridePhoto: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop",
+  bridePhoto: "/hero-couple.jpg",
   
   groomName: "Yusuf Rahman",
   groomShort: "Yusuf",
   groomTitle: "Son of Dr. Ibrahim Rahman & Mrs. Fatima Rahman",
   groomBio: "A dedicated software architect and avid traveler whose calm demeanor, integrity, and faith guide every step of his journey.",
-  groomPhoto: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop",
-  image: "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=800&auto=format&fit=crop",
+  groomPhoto: "/hero-couple.jpg",
+  image: "/couple-section.jpg",
 
   weddingDate: "2026-12-25T11:00:00+05:30",
   dateFormatted: "Friday, 25 December 2026",

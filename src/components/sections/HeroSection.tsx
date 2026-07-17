@@ -10,9 +10,22 @@ export const HeroSection: React.FC = () => {
       id="hero"
       className="relative min-h-screen flex flex-col items-center justify-between text-center px-6 pt-10 pb-8 overflow-hidden bg-[#8B6B4A] select-none"
     >
-      {/* Background with Music Button Color (#8B6B4A) & Subtle Texture Effect */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#8B6B4A] via-[#7F6142] to-[#73573A] opacity-95 pointer-events-none" />
-      <div className="absolute inset-0 bg-[radial-gradient(#FFF_1px,transparent_1px)] [background-size:24px_24px] opacity-10 pointer-events-none" />
+      {/* Hero Background Image */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+        <motion.img
+          initial={{ scale: 1.15, opacity: 0 }}
+          animate={{ scale: 1, opacity: 0.52 }}
+          transition={{ duration: 2.5, ease: "easeOut" }}
+          src="/hero-couple.jpg"
+          alt="Hero Background"
+          className="w-full h-full object-cover object-[50%_35%]"
+        />
+        {/* Warm Mocha & Gold Overlay to ensure crisp, readable text */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#8B6B4A]/80 via-[#7F6142]/70 to-[#73573A]/90 pointer-events-none" />
+      </div>
+
+      {/* Subtle Texture Effect */}
+      <div className="absolute inset-0 bg-[radial-gradient(#FFF_1px,transparent_1px)] [background-size:24px_24px] opacity-10 pointer-events-none z-0" />
 
       {/* Decorative Corner Floral Leaves (Top Left) */}
       <div className="absolute top-0 left-0 w-32 h-32 pointer-events-none opacity-25 text-white">
