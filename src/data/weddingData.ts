@@ -111,7 +111,7 @@ export const timelineData: TimelineItem[] = [
     year: "First Meeting",
     title: "A Blessed Encounter",
     subtitle: "Spring of 2024",
-    description: "Introduced through mutual family friends at an Eid charity gala, Amina and Yusuf discovered an instant connection rooted in shared values, intellectual curiosity, and deep faith.",
+    description: "Introduced through mutual family friends at an Eid charity gala, Arshi and Arish discovered an instant connection rooted in shared values, intellectual curiosity, and deep faith.",
     image: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=800&auto=format&fit=crop",
     icon: "Sparkles"
   },

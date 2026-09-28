@@ -10,19 +10,19 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: "Arshi & Arish • Royal Wedding",
-  description: "You are joyfully invited to the sacred Nikah and royal Walima celebration of Amina Al-Mansoor & Yusuf Rahman on Friday, 25 December 2026.",
-  keywords: "Amina Yusuf wedding, Islamic wedding invitation, digital Nikah invitation, luxury wedding app, WhatsApp digital card",
+  description: "You are joyfully invited to the sacred Nikah and royal Walima celebration of Arshi Khan & Arish Siddiqui on Saturday, 14 November 2026.",
+  keywords: "Arshi Arish wedding, Islamic wedding invitation, digital Nikah invitation, luxury wedding app, WhatsApp digital card",
   openGraph: {
     title: "Arshi & Arish • Royal Wedding",
-    description: "Witness the sacred union of Amina & Yusuf on Friday, 25 December 2026.",
-    url: "https://amina-and-yusuf-wedding.invitation/2026",
-    siteName: "Amina & Yusuf Wedding Celebration",
+    description: "Witness the sacred union of Arshi & Arish on Saturday, 14 November 2026.",
+    url: "https://arshi-and-arish-wedding.invitation/2026",
+    siteName: "Arshi & Arish Wedding Celebration",
     images: [
       {
         url: "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop",
         width: 1200,
         height: 630,
-        alt: "Amina & Yusuf Royal Wedding Invitation",
+        alt: "Arshi & Arish Royal Wedding Invitation",
       },
     ],
     locale: "en_US",

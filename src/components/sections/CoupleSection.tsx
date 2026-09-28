@@ -43,7 +43,7 @@ export const CoupleSection: React.FC = () => {
           <div className="w-full h-[310px] rounded-[22px] overflow-hidden relative border border-[rgba(212,175,55,0.3)]">
             <img
               src={coupleData.image || "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=800&auto=format&fit=crop"}
-              alt="Amina & Yusuf"
+              alt="Arshi & Arish"
               className="w-full h-full object-cover object-[50%_35%] group-hover:scale-105 transition-transform duration-700"
               loading="lazy"
             />
@@ -60,7 +60,7 @@ export const CoupleSection: React.FC = () => {
           className="mb-6"
         >
           <p className="text-2xl sm:text-3xl font-calligraphy text-[#D4AF37]">
-            Arish & Arshi
+            {coupleData.groomName} & {coupleData.brideName}
           </p>
         </motion.div>
 

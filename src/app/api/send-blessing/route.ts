@@ -28,7 +28,7 @@ export async function POST(request: Request) {
         "Relationship": relation || "Guest",
         "Heartfelt Blessing / Prayer": message,
         "Submitted Time": timestamp || new Date().toLocaleString(),
-        "Wedding Card": "Royal Wedding Invitation (Amina & Yusuf)",
+        "Wedding Card": "Royal Wedding Invitation (Arshi & Arish)",
       }),
     });
 
