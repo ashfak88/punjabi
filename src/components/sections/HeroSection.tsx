@@ -120,10 +120,7 @@ export const HeroSection: React.FC = () => {
           1 4 • 1 1 • 2 0 2 6
         </div>
 
-        {/* Venue / Location */}
-        <div className="text-xs sm:text-sm text-white/90 tracking-wider font-poppins font-light">
-          {coupleData.locationShort || "The GZ Retreat"} • Bhopal
-        </div>
+
       </motion.div>
 
       {/* Scroll Indicator at Bottom */}
