@@ -9,11 +9,11 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Amina & Yusuf • Royal Wedding Invitation | 25 December 2026",
+  title: "Arshi & Arish • Royal Wedding",
   description: "You are joyfully invited to the sacred Nikah and royal Walima celebration of Amina Al-Mansoor & Yusuf Rahman on Friday, 25 December 2026.",
   keywords: "Amina Yusuf wedding, Islamic wedding invitation, digital Nikah invitation, luxury wedding app, WhatsApp digital card",
   openGraph: {
-    title: "Amina & Yusuf • Royal Wedding Invitation | 25 December 2026",
+    title: "Arshi & Arish • Royal Wedding",
     description: "Witness the sacred union of Amina & Yusuf on Friday, 25 December 2026.",
     url: "https://amina-and-yusuf-wedding.invitation/2026",
     siteName: "Amina & Yusuf Wedding Celebration",
