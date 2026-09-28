@@ -8,59 +8,27 @@ import { initialWishesData } from "../../data/weddingData";
 import { WishComment } from "../../types";
 
 export const WishesSection: React.FC = () => {
-  const [wishes, setWishes] = useState<WishComment[]>(initialWishesData);
+  const [wishes, setWishes] = useState<WishComment[]>([]);
   const [name, setName] = useState("");
   const [relation, setRelation] = useState("Guest");
   const [message, setMessage] = useState("");
   const [showForm, setShowForm] = useState(false);
   const [likedIds, setLikedIds] = useState<string[]>([]);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [emailStatus, setEmailStatus] = useState<string | null>(null);
 
   const handleAddWish = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!name.trim() || !message.trim() || isSubmitting) return;
 
     setIsSubmitting(true);
-    setEmailStatus(null);
 
     const wishName = name.trim();
     const wishRelation = relation.trim() || "Guest";
     const wishMessage = message.trim();
-    const timestampStr = new Date().toLocaleString();
 
-    // 1. Send to email backend API route & FormSubmit service for zetrontechin@gmail.com
-    try {
-      await fetch("/api/send-blessing", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: wishName,
-          relation: wishRelation,
-          message: wishMessage,
-          timestamp: timestampStr,
-        }),
-      });
-
-      // Direct fallback AJAX call to FormSubmit to guarantee email delivery to zetrontechin@gmail.com
-      await fetch("https://formsubmit.co/ajax/zetrontechin@gmail.com", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({
-          _subject: `🕊️ New Wedding Blessing from ${wishName} (${wishRelation})`,
-          _template: "table",
-          "Guest Name": wishName,
-          "Relationship": wishRelation,
-          "Heartfelt Blessing / Prayer": wishMessage,
-          "Submitted Time": timestampStr,
-        }),
-      }).catch((err) => console.log("Direct AJAX fallback note:", err));
-    } catch (error) {
-      console.error("Email service notification note:", error);
-    }
+    // 1. Send to WhatsApp
+    const whatsappMessage = encodeURIComponent(`Wedding Wish from ${wishName} (${wishRelation}):\n\n${wishMessage}`);
+    window.open(`https://wa.me/918871529952?text=${whatsappMessage}`, "_blank");
 
     // 2. Add to UI live board right away
     const newWish: WishComment = {
@@ -77,7 +45,6 @@ export const WishesSection: React.FC = () => {
     setMessage("");
     setIsSubmitting(false);
     setShowForm(false);
-    setEmailStatus(`✨ Blessing posted and emailed to zetrontechin@gmail.com!`);
 
     // 3. Trigger celebratory golden confetti
     try {
@@ -90,11 +57,6 @@ export const WishesSection: React.FC = () => {
     } catch (e) {
       console.log("Confetti triggered");
     }
-
-    // Clear email status badge after 7 seconds
-    setTimeout(() => {
-      setEmailStatus(null);
-    }, 7000);
   };
 
   const toggleLike = (id: string) => {
@@ -130,27 +92,8 @@ export const WishesSection: React.FC = () => {
           <p className="text-xs text-[#8B6B4A]/70 font-poppins mt-1">
             Send your heartfelt prayers & wishes
           </p>
-          <div className="flex items-center justify-center gap-1.5 text-[10px] text-[#8B6B4A]/80 font-poppins mt-2 bg-white/80 py-1 px-3 rounded-full border border-[#C4A484]/30 w-fit mx-auto shadow-2xs">
-            <Mail className="w-3 h-3 text-[#C4A484]" />
-            <span>Sent directly to <strong>zetrontechin@gmail.com</strong></span>
-          </div>
           <div className="w-12 h-0.5 bg-[#C4A484] mx-auto mt-3" />
         </motion.div>
-
-        {/* Email Success Notification Toast */}
-        <AnimatePresence>
-          {emailStatus && (
-            <motion.div
-              initial={{ opacity: 0, y: -15, scale: 0.95 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: -15, scale: 0.95 }}
-              className="mb-6 bg-emerald-50 border border-emerald-300 rounded-2xl p-3.5 shadow-md flex items-center gap-2.5 text-emerald-800 text-xs font-medium font-poppins"
-            >
-              <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />
-              <span>{emailStatus}</span>
-            </motion.div>
-          )}
-        </AnimatePresence>
 
         {/* Add Wish Trigger / Form */}
         <div className="mb-8">
@@ -174,7 +117,7 @@ export const WishesSection: React.FC = () => {
                 Leave Your Blessing
               </h3>
               <p className="text-[10px] text-[#8B6B4A]/70 text-center font-poppins mb-3">
-                Your message will be emailed directly to the couple
+                Your message will be sent via WhatsApp
               </p>
               <input
                 type="text"
@@ -226,8 +169,8 @@ export const WishesSection: React.FC = () => {
                     </>
                   ) : (
                     <>
-                      <Send className="w-3.5 h-3.5" />
-                      <span>Post & Email</span>
+                      <MessageSquareHeart className="w-3.5 h-3.5" />
+                      <span>Send via WhatsApp</span>
                     </>
                   )}
                 </button>
@@ -273,16 +216,14 @@ export const WishesSection: React.FC = () => {
                 <div className="flex justify-end pl-2">
                   <button
                     onClick={() => toggleLike(wish.id)}
-                    className={`flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-poppins transition-all cursor-pointer ${
-                      likedIds.includes(wish.id)
+                    className={`flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-poppins transition-all cursor-pointer ${likedIds.includes(wish.id)
                         ? "bg-[#8B6B4A] text-white shadow-sm scale-105"
                         : "bg-[#F8F4EF] text-[#8B6B4A] hover:bg-[#E7D7C9]/40 border border-[#E7D7C9]"
-                    }`}
+                      }`}
                   >
                     <Heart
-                      className={`w-3.5 h-3.5 ${
-                        likedIds.includes(wish.id) ? "fill-white text-white" : "text-[#C4A484]"
-                      }`}
+                      className={`w-3.5 h-3.5 ${likedIds.includes(wish.id) ? "fill-white text-white" : "text-[#C4A484]"
+                        }`}
                     />
                     <span>{wish.likes}</span>
                   </button>

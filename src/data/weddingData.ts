@@ -1,55 +1,106 @@
 import { WeddingEvent, TimelineItem, FamilyMember, GalleryPhoto, WishComment, GiftOption } from '../types';
 
 export const coupleData = {
-  brideName: "Amina Al-Mansoor",
-  brideShort: "Amina",
-  brideTitle: "Daughter of Mr. Tariq Al-Mansoor & Mrs. Zaynab Al-Mansoor",
-  brideBio: "A compassionate soul with a deep love for art, Islamic heritage, and kindness towards all. Amina brings warmth and light into every room she enters.",
+  brideName: "Arshi Khan",
+  brideShort: "Arshi",
+  brideTitle: "Daughter of Lt. Shahjahan Khan & Mrs. Jaharan Khan",
+  brideBio: "A compassionate soul with a deep love for art, Islamic heritage, and kindness towards all. Arshi brings warmth and light into every room she enters.",
   bridePhoto: "/hero-couple.jpg",
-  
-  groomName: "Yusuf Rahman",
-  groomShort: "Yusuf",
-  groomTitle: "Son of Dr. Ibrahim Rahman & Mrs. Fatima Rahman",
+
+  groomName: "Arish Siddiqui",
+  groomShort: "Arish",
+  groomTitle: "Son of Lt. Rafat Aslam Siddiqui",
   groomBio: "A dedicated software architect and avid traveler whose calm demeanor, integrity, and faith guide every step of his journey.",
   groomPhoto: "/hero-couple.jpg",
   image: "/couple-section.jpg",
 
-  weddingDate: "2026-12-25T11:00:00+05:30",
-  dateFormatted: "Friday, 25 December 2026",
-  locationShort: "The Royal Mirage Palace",
-  venueName: "The Royal Mirage Luxury & Garden Banquet",
-  venueAddress: "786 Crescent Boulevard, Pearl District, Dubai / Demo City",
-  
+  weddingDate: "2026-11-14T20:00:00+05:30",
+  dateFormatted: "Saturday, 14 November 2026",
+  locationShort: "The GZ Retreat",
+  venueName: "The GZ Retreat",
+  venueAddress: "Bundrkha Sadak, Bhopal, Madhya Pradesh 462036",
+
   bismillahArabic: "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
   bismillahTransliteration: "Bismillahir Rahmanir Raheem",
   bismillahTranslation: "In the name of Allah, the Most Gracious, the Most Merciful",
-  
+
   islamicGreeting: "Assalamu Alaikum wa Rahmatullahi wa Barakatuh",
   greetingIntro: "All praise is due to Allah, who created us in pairs so that we may find tranquility in one another. With the blessings and prayers of our beloved parents, we joyfully invite you to share in our happiness as we unite in holy matrimony.",
-  
+
   quranVerseArabic: "وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً ۚ إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِّقَوْمٍ يَتَفَكَّرُونَ",
   quranVerseEnglish: "And of His signs is that He created for you from yourselves mates that you may find tranquility in them; and He placed between you affection and mercy. Indeed in that are signs for a people who give thought.",
   quranReference: "Surah Ar-Rum [30:21]",
 
   audioUrl: "/wedding-muhammad-al-muqit.m4a",
   audioTitle: "The Wedding — Muhammad Al Muqit (Nasheed)",
-  shareUrl: "https://amina-and-yusuf-wedding.invitation/2026",
-  whatsappShareText: "Assalamu Alaikum! You are cordially invited to the royal wedding celebration of Amina & Yusuf on Friday, 25 December 2026. View our digital invitation here: https://amina-and-yusuf-wedding.invitation/2026",
+  shareUrl: "https://arshi-and-arish-wedding.invitation/2026",
+  whatsappShareText: "Assalamu Alaikum! You are cordially invited to the wedding celebration of Arish & Arshi on Saturday, 14 November 2026. WhatsApp us at 8871529952. View our digital invitation here: https://arshi-and-arish-wedding.invitation/2026",
 };
 
 export const eventsData: WeddingEvent[] = [
   {
-    id: "reception",
-    title: "Grand Walima Reception",
-    subtitle: "Celebration & Royal Feast",
-    date: "Friday, 25 December 2026",
-    time: "7:00 PM – 11:00 PM",
-    location: "The Grand Diamond Ballroom",
-    address: "The Royal Mirage Palace, Pearl District, Demo City",
-    description: "Join us for an exquisite evening of joyous celebrations, heartfelt toasts, gourmet royal banquets, and serene companionship as we celebrate the newlyweds.",
-    dressCode: "Luxury Evening Attire & Formal Couture (Gold & Emerald Accents)",
+    id: "nikah",
+    title: "Nikah Ceremony",
+    subtitle: "Sacred Union",
+    date: "Thursday, 12 November 2026",
+    time: "Between Asar-Magrib",
+    location: "Home",
+    address: "",
+    description: "The formal Islamic marriage ceremony, uniting our souls in the presence of loved ones and the grace of Allah.",
+    dressCode: "Traditional Modest Attire",
+    icon: "Heart",
+    mapsUrl: ""
+  },
+  {
+    id: "mehndi-haldi",
+    title: "Mehndi & Haldi",
+    subtitle: "Colors & Traditions",
+    date: "Friday, 13 November 2026",
+    time: "05:00 pm",
+    location: "The GZ Retreat",
+    address: "Bundrkha Sadak, Bhopal, Madhya Pradesh 462036",
+    description: "An evening of vibrant colors, intricate henna designs, traditional blessings, and joy shared with our closest family and friends.",
     icon: "Sparkles",
-    mapsUrl: "https://maps.google.com/?q=The+Royal+Mirage+Palace"
+    mapsUrl: "https://maps.google.com/?q=The+GZ+Retreat+Bhopal"
+  },
+  {
+    id: "sufi-night",
+    title: "Sufi Night",
+    subtitle: "Soulful Music",
+    date: "Friday, 13 November 2026",
+    time: "09:00 pm",
+    location: "The GZ Retreat",
+    address: "Bundrkha Sadak, Bhopal, Madhya Pradesh 462036",
+    description: "Join us for a magical evening of soulful music, dance, and joyous celebrations.",
+    dressCode: "Black Dress Theme",
+    icon: "Sparkles",
+    mapsUrl: "https://maps.google.com/?q=The+GZ+Retreat+Bhopal"
+  },
+  {
+    id: "wedding",
+    title: "Wedding Celebration",
+    subtitle: "Barat & Main Event",
+    date: "Saturday, 14 November 2026",
+    time: "08:00 pm",
+    location: "The GZ Retreat",
+    address: "Bundrkha Sadak, Bhopal, Madhya Pradesh 462036",
+    description: "Join us for the main wedding celebration and feast as we embark on this beautiful journey together.",
+    dressCode: "Formal/Traditional Attire",
+    icon: "Sparkles",
+    mapsUrl: "https://maps.google.com/?q=The+GZ+Retreat+Bhopal"
+  },
+  {
+    id: "reception",
+    title: "Waleema",
+    subtitle: "Celebration & Feast",
+    date: "Sunday, 15 November 2026",
+    time: "08:00 pm",
+    location: "Talabeer Palace",
+    address: "NIFT Rd, Bhopal, Madhya Pradesh 462030",
+    description: "Join us for an exquisite evening of joyous celebrations and royal banquets as we celebrate the newlyweds.",
+    dressCode: "Formal Attire",
+    icon: "Sparkles",
+    mapsUrl: "https://maps.google.com/?q=Talabeer+Palace+Bhopal"
   }
 ];
 
@@ -76,7 +127,7 @@ export const timelineData: TimelineItem[] = [
     id: "wedding",
     year: "Wedding",
     title: "Our Sacred Union",
-    subtitle: "25 December 2026",
+    subtitle: "14 November 2026",
     description: "By the grace of Allah, we step into the blessed journey of marriage surrounded by the love, smiles, and warm wishes of our cherished guests.",
     image: "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=800&auto=format&fit=crop",
     icon: "Crown"
@@ -96,7 +147,7 @@ export const familyData: FamilyMember[] = [
   // Bride Side
   {
     id: "fb-1",
-    name: "Mr. Tariq Al-Mansoor & Mrs. Zaynab Al-Mansoor",
+    name: "Lt. Shahjahan Khan & Mrs. Jaharan Khan",
     relation: "Parents of the Bride",
     role: "Beloved Mother & Father",
     side: "bride",
@@ -104,11 +155,11 @@ export const familyData: FamilyMember[] = [
   },
   {
     id: "fb-2",
-    name: "Mr. Omar Al-Mansoor & Family",
-    relation: "Elder Brother of the Bride",
+    name: "Brother's Family",
+    relation: "Brother of the Bride",
     role: "Guardian & Brother",
     side: "bride",
-    blessing: "So proud of our dear Amina. May your journey with Yusuf be filled with laughter, success, and divine favor."
+    blessing: "So proud of our dear Arshi. May your journey with Arish be filled with laughter, success, and divine favor."
   },
   {
     id: "fb-3",
@@ -121,23 +172,23 @@ export const familyData: FamilyMember[] = [
   // Groom Side
   {
     id: "fg-1",
-    name: "Dr. Ibrahim Rahman & Mrs. Fatima Rahman",
-    relation: "Parents of the Groom",
-    role: "Beloved Mother & Father",
+    name: "Lt. Rafat Aslam Siddiqui",
+    relation: "Father of the Groom",
+    role: "Beloved Father",
     side: "groom",
-    blessing: "Yusuf & Amina, may Allah bless you both and bring you together in all that is good and righteous."
+    blessing: "Arish & Arshi, may Allah bless you both and bring you together in all that is good and righteous."
   },
   {
     id: "fg-2",
-    name: "Mr. Hamza Rahman & Mrs. Aisha Rahman",
+    name: "Brother's Family",
     relation: "Brother & Sister-in-law",
     role: "Loving Family",
     side: "groom",
-    blessing: "Welcome to our family, Amina! We pray for your eternal happiness and peace in this world and the hereafter."
+    blessing: "Welcome to our family, Arshi! We pray for your eternal happiness and peace in this world and the hereafter."
   },
   {
     id: "fg-3",
-    name: "Grandma Khadijah Rahman",
+    name: "Grandmother",
     relation: "Beloved Grandmother",
     role: "Family Matriarch",
     side: "groom",
@@ -150,7 +201,7 @@ export const initialWishesData: WishComment[] = [
     id: "w1",
     name: "Sheikh Abdullah & Family",
     relation: "Close Family Friend",
-    message: "MashaAllah TabarakAllah! Dearest Amina and Yusuf, may Allah bless your sacred union with infinite barakah, love, and understanding. Can't wait for December 25th! 🤲🕌✨",
+    message: "MashaAllah TabarakAllah! Dearest Arshi and Arish, may Allah bless your sacred union with infinite barakah, love, and understanding. Can't wait for November 14th! 🤲🕌✨",
     timestamp: "2 hours ago",
     likes: 24
   },
@@ -177,7 +228,7 @@ export const giftOptionsData: GiftOption[] = [
     id: "bank-1",
     title: "Direct Bank Transfer",
     type: "bank",
-    accountName: "Yusuf Rahman & Amina Al-Mansoor",
+    accountName: "Arish Siddiqui & Arshi Khan",
     accountNumber: "98765432101234",
     ifsc: "MIRAGE000786",
     bankName: "Royal Emirates Islamic Bank"
@@ -186,14 +237,14 @@ export const giftOptionsData: GiftOption[] = [
     id: "upi-1",
     title: "Instant UPI Transfer",
     type: "upi",
-    accountName: "Amina & Yusuf Wedding Fund",
-    upiId: "amina.yusuf.2026@okaxis"
+    accountName: "Arshi & Arish Wedding Fund",
+    upiId: "arshi.arish.2026@okaxis"
   },
   {
     id: "qr-1",
     title: "Scan QR Code",
     type: "qr",
-    accountName: "Amina & Yusuf Gift Registry",
-    qrCodeUrl: "https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=upi://pay?pa=amina.yusuf.2026@okaxis&pn=Amina%20and%20Yusuf%20Wedding&cu=INR"
+    accountName: "Arshi & Arish Gift Registry",
+    qrCodeUrl: "https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=upi://pay?pa=arshi.arish.2026@okaxis&pn=Arshi%20and%20Arish%20Wedding&cu=INR"
   }
 ];

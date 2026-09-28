@@ -71,9 +71,17 @@ export const EventDetails: React.FC = () => {
                   <MapPin className="w-4 h-4 text-[#C4A484] shrink-0 mt-0.5" />
                   <div>
                     <span className="font-semibold block text-[#8B6B4A]">{event.location}</span>
-                    <span className="text-[11px] text-[#1A1A1A]/70 leading-relaxed block">{event.address}</span>
+                    {event.address && (
+                      <span className="text-[11px] text-[#1A1A1A]/70 leading-relaxed block">{event.address}</span>
+                    )}
                   </div>
                 </div>
+                {event.dressCode && (
+                  <div className="flex items-center gap-3 text-xs font-poppins text-[#1A1A1A] mt-1 pt-2 border-t border-[#E7D7C9]/40">
+                    <Sparkles className="w-4 h-4 text-[#C4A484] shrink-0" />
+                    <span className="font-medium text-[#8B6B4A]">Dress Code: <span className="font-normal text-[#1A1A1A]/80">{event.dressCode}</span></span>
+                  </div>
+                )}
               </div>
 
               <p className="text-xs text-[#1A1A1A]/75 font-poppins leading-relaxed mb-6 font-light">

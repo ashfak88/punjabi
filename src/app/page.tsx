@@ -34,9 +34,8 @@ export default function Home() {
 
         {/* Main Vertical Scrollable Experience (Sections 2 - 10 in exact order) */}
         <div
-          className={`transition-opacity duration-1000 ${
-            hasEntered ? "opacity-100" : "opacity-0 pointer-events-none"
-          }`}
+          className={`transition-opacity duration-1000 ${hasEntered ? "opacity-100" : "opacity-0 pointer-events-none"
+            }`}
         >
           {/* Section 2: Hero Section */}
           <HeroSection />
