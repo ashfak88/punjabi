@@ -60,6 +60,7 @@ export const eventsData: WeddingEvent[] = [
     location: "The GZ Retreat",
     address: "Bundrkha Sadak, Bhopal, Madhya Pradesh 462036",
     description: "An evening of vibrant colors, intricate henna designs, traditional blessings, and joy shared with our closest family and friends.",
+    dressCode: "",
     icon: "Sparkles",
     mapsUrl: "https://maps.google.com/?q=The+GZ+Retreat+Bhopal"
   },

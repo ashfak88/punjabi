@@ -7,7 +7,7 @@ export interface WeddingEvent {
   location: string;
   address: string;
   description: string;
-  dressCode: string;
+  dressCode?: string;
   icon: string;
   mapsUrl: string;
 }
