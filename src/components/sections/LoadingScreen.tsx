@@ -69,11 +69,11 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onEnter }) => {
           <div className="absolute inset-5 border border-[#C4A484]/40 rounded-[28px] pointer-events-none flex flex-col justify-between p-4 z-10">
             <div className="flex justify-between items-center text-[#8B6B4A]/70 text-[10px] tracking-widest uppercase font-poppins font-medium">
               <span>BISMILLAH</span>
-              <span>14 • 11 • 2026</span>
+              <span>25 • 12 • 2026</span>
             </div>
             <div className="flex justify-between items-center text-[#8B6B4A]/70 text-[10px] tracking-widest uppercase font-poppins font-medium">
               <span>ROYAL WEDDING</span>
-              <span>DUBAI</span>
+              <span>BHOPAL</span>
             </div>
           </div>
 
@@ -138,7 +138,7 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onEnter }) => {
               </div>
 
               <p className="text-xs font-playfair italic text-[#8B6B4A] mt-2 mb-6 tracking-wide">
-                {coupleData.dateFormatted}
+                Friday, 25 December 2026
               </p>
 
               {/* Audio auto-prep indicator badge */}

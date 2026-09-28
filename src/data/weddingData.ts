@@ -49,7 +49,7 @@ export const eventsData: WeddingEvent[] = [
     description: "The formal Islamic marriage ceremony, uniting our souls in the presence of loved ones and the grace of Allah.",
     dressCode: "Traditional Modest Attire",
     icon: "Heart",
-    mapsUrl: ""
+    mapsUrl: "https://maps.app.goo.gl/gdRmEDkHf6ki3T17A"
   },
   {
     id: "mehndi-haldi",

@@ -25,7 +25,7 @@ const storyItems = [
   },
   {
     id: "nikah",
-    label: "25 DECEMBER 2026",
+    label: "14 NOVEMBER 2026",
     title: "The Sacred Nikah",
     description:
       "With the words of Allah as their bond and their families as witnesses, Arshi and Arish begin their forever.",
