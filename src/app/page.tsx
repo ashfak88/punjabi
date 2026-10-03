@@ -6,7 +6,6 @@ import { HeroSection } from "../components/sections/HeroSection";
 import { GreetingSection } from "../components/sections/GreetingSection";
 import { CoupleSection } from "../components/sections/CoupleSection";
 import { EventDetails } from "../components/sections/EventDetails";
-import { StoryTimeline } from "../components/sections/StoryTimeline";
 import { WishesSection } from "../components/sections/WishesSection";
 import { ClosingSection } from "../components/sections/ClosingSection";
 import { FloatingControls } from "../components/ui/FloatingControls";
@@ -20,17 +19,17 @@ export default function Home() {
   };
 
   return (
-    <main className="w-full min-h-screen bg-[#11100F] flex items-center justify-center py-0 sm:py-6 sm:px-4">
+    <main className="w-full min-h-screen bg-[#001F3F] flex items-center justify-center py-0 sm:py-6 sm:px-4">
       {/* 
         Mobile-first 390px Container: 
         Full width on mobile screen, exact 390px simulated luxury phone frame on larger screens 
       */}
-      <div className="mobile-invitation-container min-h-screen sm:min-h-[844px] sm:max-h-[94vh] sm:rounded-[36px] sm:overflow-y-auto sm:shadow-2xl sm:ring-8 sm:ring-[#8B6B4A]/10 no-scrollbar">
+      <div className="mobile-invitation-container min-h-screen sm:min-h-[844px] sm:max-h-[94vh] sm:rounded-[36px] sm:overflow-y-auto sm:shadow-2xl sm:ring-8 sm:ring-[#D9381E]/10 no-scrollbar">
         {/* Section 1: Splash Screen */}
         <LoadingScreen onEnter={handleEnterCelebration} />
 
-        {/* Floating Controls: Scroll progress bar right inside frame & floating Audio/Share pills */}
-        <FloatingControls audioUrl={coupleData.audioUrl} hasEntered={hasEntered} />
+        {/* Floating Controls: Scroll progress bar right inside frame */}
+        <FloatingControls hasEntered={hasEntered} />
 
         {/* Main Vertical Scrollable Experience (Sections 2 - 10 in exact order) */}
         <div
@@ -48,9 +47,6 @@ export default function Home() {
 
           {/* Section 5: Event Details */}
           <EventDetails />
-
-          {/* Section 6: Love Story Timeline */}
-          <StoryTimeline />
 
           {/* Section 9: Wishes Section */}
           <WishesSection />

@@ -17,18 +17,18 @@ export const CoupleSection: React.FC = () => {
           transition={{ duration: 0.7, ease: "easeOut" }}
           className="mb-6"
         >
-          <span className="text-[10px] uppercase tracking-[0.25em] text-[#D4AF37] font-bold block mb-1.5 font-poppins">
+          <span className="text-[10px] uppercase tracking-[0.25em] text-[#FFD700] font-bold block mb-1.5 font-poppins">
             THE BLESSED COUPLE
           </span>
-          <h2 className="text-3xl font-playfair font-bold text-[#D4AF37] mb-4">
+          <h2 className="text-3xl font-playfair font-bold text-[#FFD700] mb-4">
             Groom & Bride
           </h2>
 
           {/* Top Gold Flower Divider */}
-          <div className="flex items-center justify-center gap-3 text-[#B78846] mb-6">
-            <span className="h-[1px] w-12 bg-gradient-to-r from-transparent to-[#B78846]" />
-            <Flower2 className="w-4 h-4 text-[#B78846]" />
-            <span className="h-[1px] w-12 bg-gradient-to-l from-transparent to-[#B78846]" />
+          <div className="flex items-center justify-center gap-3 text-[#FF4500] mb-6">
+            <span className="h-[1px] w-12 bg-gradient-to-r from-transparent to-[#FF4500]" />
+            <Flower2 className="w-4 h-4 text-[#FF4500]" />
+            <span className="h-[1px] w-12 bg-gradient-to-l from-transparent to-[#FF4500]" />
           </div>
         </motion.div>
 
@@ -38,16 +38,16 @@ export const CoupleSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           viewport={{ once: false, amount: 0.25 }}
           transition={{ duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
-          className="w-full max-w-[240px] mx-auto bg-[#FFFDF9] p-2.5 rounded-[28px] border-2 border-[#B78846]/50 shadow-xl mb-5 relative overflow-hidden group"
+          className="w-full max-w-[240px] mx-auto bg-[#FFF5EE] p-2.5 rounded-[28px] border-2 border-[#FF4500]/50 shadow-xl mb-5 relative overflow-hidden group"
         >
           <div className="w-full h-[310px] rounded-[22px] overflow-hidden relative border border-[rgba(212,175,55,0.3)]">
             <img
-              src={coupleData.image || "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=800&auto=format&fit=crop"}
-              alt="Arshi & Arish"
+              src={coupleData.image || "/hero-couple.jpg"}
+              alt={`${coupleData.groomShort} & ${coupleData.brideShort}`}
               className="w-full h-full object-cover object-[50%_35%] group-hover:scale-105 transition-transform duration-700"
               loading="lazy"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#D4AF37]/30 via-transparent to-transparent pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#FFD700]/30 via-transparent to-transparent pointer-events-none" />
           </div>
         </motion.div>
 
@@ -59,7 +59,7 @@ export const CoupleSection: React.FC = () => {
           transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
           className="mb-6"
         >
-          <p className="text-2xl sm:text-3xl font-calligraphy text-[#D4AF37]">
+          <p className="text-2xl sm:text-3xl font-calligraphy text-[#FFD700]">
             {coupleData.groomName} & {coupleData.brideName}
           </p>
         </motion.div>
@@ -70,11 +70,11 @@ export const CoupleSection: React.FC = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 0.6 }}
-          className="flex items-center justify-center gap-3 text-[#B78846] mb-8"
+          className="flex items-center justify-center gap-3 text-[#FF4500] mb-8"
         >
-          <span className="h-[1px] w-12 bg-gradient-to-r from-transparent to-[#B78846]" />
-          <Flower2 className="w-4 h-4 text-[#B78846]" />
-          <span className="h-[1px] w-12 bg-gradient-to-l from-transparent to-[#B78846]" />
+          <span className="h-[1px] w-12 bg-gradient-to-r from-transparent to-[#FF4500]" />
+          <Flower2 className="w-4 h-4 text-[#FF4500]" />
+          <span className="h-[1px] w-12 bg-gradient-to-l from-transparent to-[#FF4500]" />
         </motion.div>
 
         {/* Family Cards Side by Side */}
@@ -85,19 +85,19 @@ export const CoupleSection: React.FC = () => {
             whileInView={{ opacity: 1, x: 0, y: 0 }}
             viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="bg-[#F4ECE6] border border-[rgba(212,175,55,0.3)] rounded-[24px] p-4 shadow-md flex flex-col items-center justify-center"
+            className="bg-[#FFF5EE] border border-[rgba(212,175,55,0.3)] rounded-[24px] p-4 shadow-md flex flex-col items-center justify-center"
           >
-            <span className="text-[8px] uppercase tracking-[0.2em] text-[#6A859C] font-bold mb-1.5 font-poppins">
+            <span className="text-[8px] uppercase tracking-[0.2em] text-[#FF8C00] font-bold mb-1.5 font-poppins">
               GROOM'S FAMILY
             </span>
-            <span className="text-xl font-calligraphy text-[#D47E84] mb-2">
-              Arish
+            <span className="text-xl font-calligraphy text-[#FF6347] mb-2">
+              {coupleData.groomShort}
             </span>
-            <span className="text-[7px] uppercase tracking-widest text-[#D4AF37]/70 font-semibold mb-1 font-poppins">
+            <span className="text-[7px] uppercase tracking-widest text-[#FFD700]/70 font-semibold mb-1 font-poppins">
               SON OF
             </span>
-            <span className="text-[11px] font-playfair text-[#D4AF37] font-medium leading-tight">
-              Lt. Rafat Aslam Siddiqui
+            <span className="text-[11px] font-playfair text-[#FFD700] font-medium leading-tight whitespace-pre-line">
+              {coupleData.groomTitle.replace("Son of ", "")}
             </span>
           </motion.div>
 
@@ -107,25 +107,19 @@ export const CoupleSection: React.FC = () => {
             whileInView={{ opacity: 1, x: 0, y: 0 }}
             viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="bg-[#F4ECE6] border border-[rgba(212,175,55,0.3)] rounded-[24px] p-4 shadow-md flex flex-col items-center justify-center"
+            className="bg-[#FFF5EE] border border-[rgba(212,175,55,0.3)] rounded-[24px] p-4 shadow-md flex flex-col items-center justify-center"
           >
-            <span className="text-[8px] uppercase tracking-[0.2em] text-[#6A859C] font-bold mb-1.5 font-poppins">
+            <span className="text-[8px] uppercase tracking-[0.2em] text-[#FF8C00] font-bold mb-1.5 font-poppins">
               BRIDE'S FAMILY
             </span>
-            <span className="text-xl font-calligraphy text-[#D47E84] mb-2">
-              Arshi
+            <span className="text-xl font-calligraphy text-[#FF6347] mb-2">
+              {coupleData.brideShort}
             </span>
-            <span className="text-[7px] uppercase tracking-widest text-[#D4AF37]/70 font-semibold mb-1 font-poppins">
+            <span className="text-[7px] uppercase tracking-widest text-[#FFD700]/70 font-semibold mb-1 font-poppins">
               DAUGHTER OF
             </span>
-            <span className="text-[11px] font-playfair text-[#D4AF37] font-medium leading-tight">
-              Lt. Shahjahan Khan
-            </span>
-            <span className="text-[10px] text-[#B78846] italic my-0.5">
-              &
-            </span>
-            <span className="text-[11px] font-playfair text-[#D4AF37] font-medium leading-tight">
-              Mrs. Jaharan Khan
+            <span className="text-[11px] font-playfair text-[#FFD700] font-medium leading-tight whitespace-pre-line">
+              {coupleData.brideTitle.replace("Daughter of ", "")}
             </span>
           </motion.div>
         </div>

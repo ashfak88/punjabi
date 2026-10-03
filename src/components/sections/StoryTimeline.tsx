@@ -10,7 +10,7 @@ const storyItems = [
     label: "THE BEGINNING",
     title: "Two Families, One Dua",
     description:
-      "What Allah has decreed shall always come to pass. Two families, bound by faith and love, came together in prayer.",
+      "What Waheguru has decreed shall always come to pass. Two families, bound by faith and love, came together in prayer.",
     icon: "heart",
     side: "right",
   },
@@ -19,7 +19,7 @@ const storyItems = [
     label: "THE PROMISE",
     title: "Istikhara & Acceptance",
     description:
-      "Guided by Allah's wisdom, both hearts found peace and acceptance in this blessed union.",
+      "Guided by Waheguru's wisdom, both hearts found peace and acceptance in this blessed union.",
     icon: "ring",
     side: "left",
   },
@@ -28,21 +28,21 @@ const storyItems = [
     label: "14 NOVEMBER 2026",
     title: "The Sacred Nikah",
     description:
-      "With the words of Allah as their bond and their families as witnesses, Arshi and Arish begin their forever.",
-    icon: "mosque",
+      "With the words of Waheguru as their bond and their families as witnesses, they begin their forever.",
+    icon: "temple",
     side: "right",
   },
 ];
 
 const IconNode = ({ icon, side }: { icon: string; side: string }) => {
   const base =
-    "w-12 h-12 rounded-full flex items-center justify-center shadow-lg border-2 border-[#B78846] bg-[#06402B]/60 backdrop-blur-md text-[#D4AF37] shrink-0";
+    "w-12 h-12 rounded-full flex items-center justify-center shadow-lg border-2 border-[#FF4500] bg-[#800000]/60 backdrop-blur-md text-[#FFD700] shrink-0";
 
   return (
     <div className={base}>
-      {icon === "heart" && <Heart className="w-5 h-5 fill-[#B78846] text-[#B78846]" />}
-      {icon === "ring" && <Sparkles className="w-5 h-5 text-[#D4AF37]" />}
-      {icon === "mosque" && <Building2 className="w-5 h-5 text-[#D4AF37]" />}
+      {icon === "heart" && <Heart className="w-5 h-5 fill-[#FF4500] text-[#FF4500]" />}
+      {icon === "ring" && <Sparkles className="w-5 h-5 text-[#FFD700]" />}
+      {icon === "mosque" && <Building2 className="w-5 h-5 text-[#FFD700]" />}
     </div>
   );
 };
@@ -59,23 +59,23 @@ export const StoryTimeline: React.FC = () => {
           transition={{ duration: 0.7, ease: "easeOut" }}
           className="text-center mb-12"
         >
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#06402B]/60 backdrop-blur-md border border-[rgba(212,175,55,0.3)] text-[10px] uppercase tracking-widest text-[#D4AF37] font-semibold mb-2 shadow-sm">
-            <Sparkles className="w-3 h-3 text-[#B78846]" />
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#800000]/60 backdrop-blur-md border border-[rgba(212,175,55,0.3)] text-[10px] uppercase tracking-widest text-[#FFD700] font-semibold mb-2 shadow-sm">
+            <Sparkles className="w-3 h-3 text-[#FF4500]" />
             <span>OUR JOURNEY</span>
           </div>
-          <h2 className="text-3xl font-playfair font-bold text-[#D4AF37]">
+          <h2 className="text-3xl font-playfair font-bold text-[#FFD700]">
             Our Story
           </h2>
-          <p className="text-xs text-[#D4AF37]/70 font-poppins mt-1">
-            How Allah brought our paths together
+          <p className="text-xs text-[#FFD700]/70 font-poppins mt-1">
+            How Waheguru brought our paths together
           </p>
-          <div className="w-12 h-0.5 bg-[#B78846] mx-auto mt-3" />
+          <div className="w-12 h-0.5 bg-[#FF4500] mx-auto mt-3" />
         </motion.div>
 
         {/* Timeline */}
         <div className="relative">
           {/* Centre vertical line */}
-          <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-[2px] bg-[#B78846]/30" />
+          <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-[2px] bg-[#FF4500]/30" />
 
           <div className="flex flex-col gap-0">
             {storyItems.map((item, index) => {
@@ -93,10 +93,10 @@ export const StoryTimeline: React.FC = () => {
                   <div className="flex-1 pr-6 text-right">
                     {!isRight && (
                       <div>
-                        <span className="text-[9px] uppercase tracking-[0.2em] text-[#B78846] font-bold font-poppins block mb-1">
+                        <span className="text-[9px] uppercase tracking-[0.2em] text-[#FF4500] font-bold font-poppins block mb-1">
                           {item.label}
                         </span>
-                        <h3 className="text-base font-playfair font-bold text-[#D4AF37] leading-snug mb-1.5">
+                        <h3 className="text-base font-playfair font-bold text-[#FFD700] leading-snug mb-1.5">
                           {item.title}
                         </h3>
                         <p className="text-[11px] text-[#1A1A1A]/70 font-poppins font-light leading-relaxed">
@@ -115,10 +115,10 @@ export const StoryTimeline: React.FC = () => {
                   <div className="flex-1 pl-6 text-left">
                     {isRight && (
                       <div>
-                        <span className="text-[9px] uppercase tracking-[0.2em] text-[#B78846] font-bold font-poppins block mb-1">
+                        <span className="text-[9px] uppercase tracking-[0.2em] text-[#FF4500] font-bold font-poppins block mb-1">
                           {item.label}
                         </span>
-                        <h3 className="text-base font-playfair font-bold text-[#D4AF37] leading-snug mb-1.5">
+                        <h3 className="text-base font-playfair font-bold text-[#FFD700] leading-snug mb-1.5">
                           {item.title}
                         </h3>
                         <p className="text-[11px] text-[#1A1A1A]/70 font-poppins font-light leading-relaxed">

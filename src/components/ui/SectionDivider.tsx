@@ -15,11 +15,11 @@ export const SectionDivider: React.FC<SectionDividerProps> = ({
     <div className="py-12 flex flex-col items-center justify-center text-center px-4">
       {/* Decorative floral crest top */}
       <div className="flex items-center gap-3 mb-4 opacity-80">
-        <div className="w-12 sm:w-20 h-[1px] bg-gradient-to-r from-transparent to-[#D4AF37]" />
-        <span className="text-[#D4AF37] text-xl sm:text-2xl font-calligraphy select-none animate-pulse-glow">
+        <div className="w-12 sm:w-20 h-[1px] bg-gradient-to-r from-transparent to-[#FFD700]" />
+        <span className="text-[#FFD700] text-xl sm:text-2xl font-calligraphy select-none animate-pulse-glow">
           ✦ ❦ ✦
         </span>
-        <div className="w-12 sm:w-20 h-[1px] bg-gradient-to-l from-transparent to-[#D4AF37]" />
+        <div className="w-12 sm:w-20 h-[1px] bg-gradient-to-l from-transparent to-[#FFD700]" />
       </div>
 
       {title && (
@@ -35,7 +35,7 @@ export const SectionDivider: React.FC<SectionDividerProps> = ({
       )}
 
       {/* Subtle bottom diamond */}
-      <div className="mt-4 w-2 h-2 rotate-45 bg-[#D4AF37]/50" />
+      <div className="mt-4 w-2 h-2 rotate-45 bg-[#FFD700]/50" />
     </div>
   );
 };

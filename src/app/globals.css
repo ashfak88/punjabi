@@ -9,7 +9,7 @@
   }
 
   body {
-    background-color: #11100F;
+    background-color: #001F3F;
     /* Sleek dark luxury backdrop for outside the 390px mobile frame on desktop */
     color: #1A1A1A;
     font-family: var(--font-poppins), sans-serif;
@@ -101,11 +101,11 @@
 
 .gold-foil-text {
   background: linear-gradient(135deg,
-      #8B6B4A 0%,
-      #C4A484 25%,
-      #FFF5C0 50%,
-      #C4A484 75%,
-      #8B6B4A 100%);
+      #D9381E 0%,
+      #F2A900 25%,
+      #FFDF00 50%,
+      #F2A900 75%,
+      #D9381E 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 200% auto;
@@ -113,7 +113,7 @@
 }
 
 .gold-foil-border {
-  border-image: linear-gradient(135deg, #8B6B4A, #FFF5C0, #C4A484, #8B6B4A) 1;
+  border-image: linear-gradient(135deg, #D9381E, #FFDF00, #F2A900, #D9381E) 1;
 }
 
 /* Luxury Card & Glassmorphism Styles (Rounded 24px, Soft Shadows) */
@@ -150,7 +150,7 @@
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  background-color: #F8F4EF;
+  background-color: #FFF8F0;
   position: relative;
   overflow-x: hidden;
   box-shadow: 0 0 80px rgba(0, 0, 0, 0.5);

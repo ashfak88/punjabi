@@ -2,27 +2,27 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const viewport: Viewport = {
-  themeColor: "#F8F4EF",
+  themeColor: "#FFF8F0",
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
 };
 
 export const metadata: Metadata = {
-  title: "Arshi & Arish • Royal Wedding",
-  description: "You are joyfully invited to the sacred Nikah and royal Walima celebration of Arshi Khan & Arish Siddiqui on Saturday, 14 November 2026.",
-  keywords: "Arshi Arish wedding, Islamic wedding invitation, digital Nikah invitation, luxury wedding app, WhatsApp digital card",
+  title: "Ramjot & Kishandeep • Royal Wedding",
+  description: "You are joyfully invited to the sacred Anand Karaj and Wedding Celebration of Ramjot Kaur & Kishandeep Singh on Friday, 4 December 2026.",
+  keywords: "Ramjot Kishandeep wedding, Sikh Punjabi wedding invitation, digital Anand Karaj invitation, luxury wedding app, WhatsApp digital card",
   openGraph: {
-    title: "Arshi & Arish • Royal Wedding",
-    description: "Witness the sacred union of Arshi & Arish on Saturday, 14 November 2026.",
-    url: "https://arshi-and-arish-wedding.invitation/2026",
-    siteName: "Arshi & Arish Wedding Celebration",
+    title: "Ramjot & Kishandeep • Royal Wedding",
+    description: "Witness the sacred union of Ramjot & Kishandeep on Friday, 4 December 2026.",
+    url: "https://ramjot-and-kishandeep-wedding.invitation/2026",
+    siteName: "Ramjot & Kishandeep Wedding Celebration",
     images: [
       {
         url: "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop",
         width: 1200,
         height: 630,
-        alt: "Arshi & Arish Royal Wedding Invitation",
+        alt: "Ramjot & Kishandeep Royal Wedding Invitation",
       },
     ],
     locale: "en_US",
@@ -38,7 +38,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth no-scrollbar">
       <body
-        className="font-poppins bg-[#11100F] text-[#1A1A1A] antialiased selection:bg-[#C4A484] selection:text-white min-h-screen flex flex-col items-center justify-start"
+        className="font-poppins bg-[#001F3F] text-[#1A1A1A] antialiased selection:bg-[#F2A900] selection:text-white min-h-screen flex flex-col items-center justify-start"
       >
         {children}
       </body>

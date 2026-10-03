@@ -41,7 +41,7 @@ export const FloatingParticles: React.FC<FloatingParticlesProps> = ({
         const size = Math.random() * 5 + 2;
         particle.style.width = `${size}px`;
         particle.style.height = `${size}px`;
-        particle.style.backgroundColor = Math.random() > 0.3 ? "#D4AF37" : "#FFF5C0";
+        particle.style.backgroundColor = Math.random() > 0.3 ? "#FFD700" : "#FFDF00";
         particle.style.borderRadius = "50%";
         particle.style.boxShadow = "0 0 8px rgba(212, 175, 55, 0.8)";
       }
