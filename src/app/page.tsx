@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { LoadingScreen } from "../components/sections/LoadingScreen";
 import { HeroSection } from "../components/sections/HeroSection";
 import { GreetingSection } from "../components/sections/GreetingSection";
@@ -13,6 +13,20 @@ import { coupleData } from "../data/weddingData";
 
 export default function Home() {
   const [hasEntered, setHasEntered] = useState<boolean>(false);
+
+  useEffect(() => {
+    // Prevent browser's default scroll restoration
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+    // Scroll to top of window
+    window.scrollTo(0, 0);
+    // Scroll the inner container to top as well, if it's the one scrolling (desktop view)
+    const container = document.querySelector('.mobile-invitation-container');
+    if (container) {
+      container.scrollTop = 0;
+    }
+  }, []);
 
   const handleEnterCelebration = () => {
     setHasEntered(true);
