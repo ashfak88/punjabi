@@ -42,12 +42,12 @@ export const eventsData: WeddingEvent[] = [
     subtitle: "Divine Blessings",
     date: "Tuesday, 1 December 2026",
     time: "10:00 AM onwards",
-    location: "Home",
+    location: "",
     address: "",
     description: "Join us in seeking the blessings of the Almighty as we begin our wedding celebrations with the recitations of Sukhmani Sahib.",
     dressCode: "",
     icon: "Heart",
-    mapsUrl: "https://maps.google.com"
+    mapsUrl: ""
   },
   {
     id: "mehndi",
@@ -60,7 +60,7 @@ export const eventsData: WeddingEvent[] = [
     description: "An afternoon of vibrant colors, intricate henna designs, and joyous celebrations.",
     dressCode: "",
     icon: "Sparkles",
-    mapsUrl: "https://maps.google.com"
+    mapsUrl: ""
   },
   {
     id: "haldi-jaggo",
@@ -73,7 +73,7 @@ export const eventsData: WeddingEvent[] = [
     description: "The traditional ceremony of applying turmeric, symbolizing purity and blessings for the couple, followed by a night of traditional songs, dance, and endless celebration.",
     dressCode: "",
     icon: "Sparkles",
-    mapsUrl: "https://maps.google.com"
+    mapsUrl: ""
   },
   {
     id: "anand-karaj",
@@ -81,12 +81,12 @@ export const eventsData: WeddingEvent[] = [
     subtitle: "Sacred Union",
     date: "Friday, 4 December 2026",
     time: "7:00 AM",
-    location: "Gurudwara Sahib, Lalheri",
+    location: "Gurudwara, Bhadal Thuha",
     address: "",
     description: "The blissful union of two souls in the presence of Sri Guru Granth Sahib Ji.",
     dressCode: "",
     icon: "Heart",
-    mapsUrl: "https://maps.google.com/?q=Gurudwara+Sahib+Lalheri"
+    mapsUrl: "https://www.google.com/maps/search/Gurudwara,+Bhadal+Thuha/@30.5923164,76.2327708,17z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI2MDkzMC4wIKXMDSoASAFQAw%3D%3D"
   },
   {
     id: "wedding",
