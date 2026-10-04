@@ -9,19 +9,17 @@ import { EventDetails } from "../components/sections/EventDetails";
 import { WishesSection } from "../components/sections/WishesSection";
 import { ClosingSection } from "../components/sections/ClosingSection";
 import { FloatingControls } from "../components/ui/FloatingControls";
+import { AudioPlayer } from "../components/ui/AudioPlayer";
 import { coupleData } from "../data/weddingData";
 
 export default function Home() {
   const [hasEntered, setHasEntered] = useState<boolean>(false);
 
   useEffect(() => {
-    // Prevent browser's default scroll restoration
     if ('scrollRestoration' in history) {
       history.scrollRestoration = 'manual';
     }
-    // Scroll to top of window
     window.scrollTo(0, 0);
-    // Scroll the inner container to top as well, if it's the one scrolling (desktop view)
     const container = document.querySelector('.mobile-invitation-container');
     if (container) {
       container.scrollTop = 0;
@@ -44,6 +42,9 @@ export default function Home() {
 
         {/* Floating Controls: Scroll progress bar right inside frame */}
         <FloatingControls hasEntered={hasEntered} />
+        
+        {/* Audio Player for Sikh Wedding Music */}
+        <AudioPlayer audioUrl="/wedding-song.mp3" startTime={5} playTrigger={hasEntered} />
 
         {/* Main Vertical Scrollable Experience (Sections 2 - 10 in exact order) */}
         <div

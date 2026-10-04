@@ -5,22 +5,47 @@ import { Volume2, VolumeX, Music } from "lucide-react";
 
 interface AudioPlayerProps {
   audioUrl: string;
+  startTime?: number;
+  playTrigger?: boolean;
 }
 
-export const AudioPlayer: React.FC<AudioPlayerProps> = ({ audioUrl }) => {
+export const AudioPlayer: React.FC<AudioPlayerProps> = ({ audioUrl, startTime = 0, playTrigger = false }) => {
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
     // Initialize audio element
-    audioRef.current = new Audio(audioUrl);
-    audioRef.current.loop = true;
-    audioRef.current.volume = 0.4; // Soft background volume
+    if (!audioRef.current) {
+      audioRef.current = new Audio(audioUrl);
+      audioRef.current.loop = true;
+      audioRef.current.volume = 0.4; // Soft background volume
+      if (startTime > 0) {
+        audioRef.current.currentTime = startTime;
+      }
+    }
 
     const handleCanPlay = () => setIsLoaded(true);
     audioRef.current.addEventListener("canplaythrough", handleCanPlay);
 
+    return () => {
+      if (audioRef.current) {
+        audioRef.current.removeEventListener("canplaythrough", handleCanPlay);
+      }
+    };
+  }, [audioUrl, startTime]);
+
+  // Handle playTrigger change
+  useEffect(() => {
+    if (playTrigger && audioRef.current && !isPlaying) {
+      audioRef.current
+        .play()
+        .then(() => setIsPlaying(true))
+        .catch((err) => console.log("Playback error from trigger:", err));
+    }
+  }, [playTrigger]);
+
+  useEffect(() => {
     // Auto-play listener on first user interaction anywhere if not started
     const handleFirstClick = () => {
       if (audioRef.current && audioRef.current.paused && !isPlaying) {
@@ -34,16 +59,14 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({ audioUrl }) => {
       window.removeEventListener("click", handleFirstClick);
     };
 
-    window.addEventListener("click", handleFirstClick);
+    if (!playTrigger) {
+      window.addEventListener("click", handleFirstClick);
+    }
 
     return () => {
-      if (audioRef.current) {
-        audioRef.current.pause();
-        audioRef.current.removeEventListener("canplaythrough", handleCanPlay);
-      }
       window.removeEventListener("click", handleFirstClick);
     };
-  }, [audioUrl, isPlaying]);
+  }, [isPlaying, playTrigger]);
 
   const toggleAudio = (e: React.MouseEvent) => {
     e.stopPropagation();
