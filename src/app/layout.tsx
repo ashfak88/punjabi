@@ -38,7 +38,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth no-scrollbar" suppressHydrationWarning>
       <body
-        className="font-poppins bg-[#001F3F] text-[#1A1A1A] antialiased selection:bg-[#F2A900] selection:text-white min-h-screen flex flex-col items-center justify-start"
+        className="font-poppins bg-[#001F3F] text-[#1A1A1A] antialiased selection:bg-[#CCAF8D] selection:text-white min-h-screen flex flex-col items-center justify-start"
         suppressHydrationWarning
       >
         {children}

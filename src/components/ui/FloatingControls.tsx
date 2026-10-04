@@ -28,9 +28,9 @@ export const FloatingControls: React.FC<FloatingControlsProps> = ({
 
   return (
     <>
-      <div className="sticky top-0 left-0 right-0 z-50 h-1.5 w-full bg-[#FFDAB9]/40 backdrop-blur-sm overflow-hidden">
+      <div className="sticky top-0 left-0 right-0 z-50 h-1.5 w-full bg-[#CCAF8D]/40 backdrop-blur-sm overflow-hidden">
         <div
-          className="h-full bg-gradient-to-r from-[#F2A900] via-[#D9381E] to-[#FFD700] transition-all duration-150 ease-out"
+          className="h-full bg-gradient-to-r from-[#CCAF8D] via-[#A14124] to-[#CCAF8D] transition-all duration-150 ease-out"
           style={{ width: `${scrollProgress}%` }}
         />
       </div>

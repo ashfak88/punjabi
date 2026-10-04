@@ -93,13 +93,13 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({ audioUrl, startTime = 
   return (
     <div className="fixed bottom-6 right-6 z-50 flex items-center gap-3">
       {isPlaying && (
-        <div className="hidden sm:flex items-center gap-1 bg-white/80 dark:bg-black/80 backdrop-blur-md border border-[#FFD700]/40 px-3 py-1.5 rounded-full shadow-lg text-xs font-medium tracking-wider text-[#1A1A1A] dark:text-[#FFD700] animate-fade-in">
-          <Music className="w-3.5 h-3.5 text-[#FFD700] animate-bounce" />
+        <div className="hidden sm:flex items-center gap-1 bg-white/80 dark:bg-black/80 backdrop-blur-md border border-[#CCAF8D]/40 px-3 py-1.5 rounded-full shadow-lg text-xs font-medium tracking-wider text-[#1A1A1A] dark:text-[#CCAF8D] animate-fade-in">
+          <Music className="w-3.5 h-3.5 text-[#CCAF8D] animate-bounce" />
           <span>Wedding Symphony</span>
           <div className="flex items-end gap-0.5 ml-1 h-3">
-            <span className="w-0.5 bg-[#FFD700] animate-pulse h-2"></span>
-            <span className="w-0.5 bg-[#FFD700] animate-pulse h-3"></span>
-            <span className="w-0.5 bg-[#FFD700] animate-pulse h-1.5"></span>
+            <span className="w-0.5 bg-[#CCAF8D] animate-pulse h-2"></span>
+            <span className="w-0.5 bg-[#CCAF8D] animate-pulse h-3"></span>
+            <span className="w-0.5 bg-[#CCAF8D] animate-pulse h-1.5"></span>
           </div>
         </div>
       )}
@@ -108,8 +108,8 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({ audioUrl, startTime = 
         onClick={toggleAudio}
         aria-label={isPlaying ? "Mute Background Music" : "Play Background Music"}
         className={`w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 shadow-2xl border ${isPlaying
-            ? "bg-[#0A2E1F] text-[#FFD700] border-[#FFD700] shadow-[#FFD700]/30 scale-105 ring-2 ring-[#FFD700]/40 ring-offset-2"
-            : "bg-white/90 text-[#1A1A1A] border-[#FFD700]/50 hover:scale-105 hover:bg-[#FFD700] hover:text-white"
+            ? "bg-[#0A2E1F] text-[#CCAF8D] border-[#CCAF8D] shadow-[#CCAF8D]/30 scale-105 ring-2 ring-[#CCAF8D]/40 ring-offset-2"
+            : "bg-white/90 text-[#1A1A1A] border-[#CCAF8D]/50 hover:scale-105 hover:bg-[#CCAF8D] hover:text-white"
           }`}
       >
         {isPlaying ? (

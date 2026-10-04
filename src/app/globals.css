@@ -101,11 +101,11 @@
 
 .gold-foil-text {
   background: linear-gradient(135deg,
-      #D9381E 0%,
-      #F2A900 25%,
-      #FFDF00 50%,
-      #F2A900 75%,
-      #D9381E 100%);
+      #A14124 0%,
+      #CCAF8D 25%,
+      #CCAF8D 50%,
+      #CCAF8D 75%,
+      #A14124 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 200% auto;
@@ -113,7 +113,7 @@
 }
 
 .gold-foil-border {
-  border-image: linear-gradient(135deg, #D9381E, #FFDF00, #F2A900, #D9381E) 1;
+  border-image: linear-gradient(135deg, #A14124, #CCAF8D, #CCAF8D, #A14124) 1;
 }
 
 /* Luxury Card & Glassmorphism Styles (Rounded 24px, Soft Shadows) */

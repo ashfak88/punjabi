@@ -36,7 +36,7 @@ export default function Home() {
         Mobile-first 390px Container: 
         Full width on mobile screen, exact 390px simulated luxury phone frame on larger screens 
       */}
-      <div className="mobile-invitation-container min-h-screen sm:min-h-[844px] sm:max-h-[94vh] sm:rounded-[36px] sm:overflow-y-auto sm:shadow-2xl sm:ring-8 sm:ring-[#D9381E]/10 no-scrollbar">
+      <div className="mobile-invitation-container min-h-screen sm:min-h-[844px] sm:max-h-[94vh] sm:rounded-[36px] sm:overflow-y-auto sm:shadow-2xl sm:ring-8 sm:ring-[#A14124]/10 no-scrollbar">
         {/* Section 1: Splash Screen */}
         <LoadingScreen onEnter={handleEnterCelebration} />
 

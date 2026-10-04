@@ -41,13 +41,13 @@ export const eventsData: WeddingEvent[] = [
     title: "Sukhmani Sahib Path",
     subtitle: "Divine Blessings",
     date: "Tuesday, 1 December 2026",
-    time: "10:00 AM – 11:00 AM",
+    time: "10:00 AM onwards",
     location: "Home",
     address: "",
     description: "Join us in seeking the blessings of the Almighty as we begin our wedding celebrations with the recitations of Sukhmani Sahib.",
-    dressCode: "Traditional Modest Attire",
+    dressCode: "",
     icon: "Heart",
-    mapsUrl: ""
+    mapsUrl: "https://maps.google.com"
   },
   {
     id: "mehndi",
@@ -58,35 +58,22 @@ export const eventsData: WeddingEvent[] = [
     location: "Residence of Rehal Family",
     address: "",
     description: "An afternoon of vibrant colors, intricate henna designs, and joyous celebrations.",
-    dressCode: "Bright & Festive Colors",
+    dressCode: "",
     icon: "Sparkles",
-    mapsUrl: ""
+    mapsUrl: "https://maps.google.com"
   },
   {
-    id: "jaggo",
-    title: "Jaggo Ceremony",
-    subtitle: "Night of Celebration",
+    id: "haldi-jaggo",
+    title: "Haldi & Jaggo Ceremony",
+    subtitle: "Golden Glow & Night of Celebration",
     date: "Thursday, 3 December 2026",
     time: "6:00 PM onwards",
     location: "Residence of Rehal Family",
     address: "",
-    description: "Let's light up the night with traditional songs, dance, and endless celebration.",
-    dressCode: "Traditional Punjabi Attire",
+    description: "The traditional ceremony of applying turmeric, symbolizing purity and blessings for the couple, followed by a night of traditional songs, dance, and endless celebration.",
+    dressCode: "",
     icon: "Sparkles",
-    mapsUrl: ""
-  },
-  {
-    id: "haldi",
-    title: "Haldi Ceremony",
-    subtitle: "Golden Glow",
-    date: "Thursday, 3 December 2026",
-    time: "7:00 PM onwards",
-    location: "Residence of Rehal Family",
-    address: "",
-    description: "The traditional ceremony of applying turmeric, symbolizing purity and blessings for the couple.",
-    dressCode: "Yellow/Orange Attire",
-    icon: "Sparkles",
-    mapsUrl: ""
+    mapsUrl: "https://maps.google.com"
   },
   {
     id: "anand-karaj",
@@ -94,12 +81,12 @@ export const eventsData: WeddingEvent[] = [
     subtitle: "Sacred Union",
     date: "Friday, 4 December 2026",
     time: "7:00 AM",
-    location: "Gurdwara Sahib",
+    location: "Gurudwara Sahib, Lalheri",
     address: "",
     description: "The blissful union of two souls in the presence of Sri Guru Granth Sahib Ji.",
-    dressCode: "Traditional Modest Attire (Head Covered)",
+    dressCode: "",
     icon: "Heart",
-    mapsUrl: ""
+    mapsUrl: "https://maps.google.com/?q=Gurudwara+Sahib+Lalheri"
   },
   {
     id: "wedding",
@@ -110,7 +97,7 @@ export const eventsData: WeddingEvent[] = [
     location: "Pizzallia Royal Resorts",
     address: "Khanna–Kheri Naudh Singh Road, Lalheri, Khanna, Punjab – 141417",
     description: "Join us for the grand wedding celebration and feast to bless the newlyweds.",
-    dressCode: "Formal/Traditional Attire",
+    dressCode: "",
     icon: "Sparkles",
     mapsUrl: "https://maps.google.com/?q=Pizzallia+Royal+Resorts+Khanna"
   }

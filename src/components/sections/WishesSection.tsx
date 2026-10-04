@@ -39,7 +39,7 @@ export const WishesSection: React.FC = () => {
         particleCount: 130,
         spread: 80,
         origin: { y: 0.6 },
-        colors: ["#F2A900", "#D9381E", "#FFD700", "#10B981"],
+        colors: ["#CCAF8D", "#A14124", "#CCAF8D", "#10B981"],
       });
     } catch (e) {
       console.log("Confetti triggered");
@@ -59,17 +59,17 @@ export const WishesSection: React.FC = () => {
           transition={{ duration: 0.7, ease: "easeOut" }}
           className="text-center mb-8"
         >
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-[#FFDAB9] text-[10px] uppercase tracking-widest text-[#D9381E] font-semibold mb-2 shadow-sm">
-            <Sparkles className="w-3 h-3 text-[#F2A900]" />
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-[#CCAF8D] text-[10px] uppercase tracking-widest text-[#A14124] font-semibold mb-2 shadow-sm">
+            <Sparkles className="w-3 h-3 text-[#CCAF8D]" />
             <span>WORDS OF BLESSING</span>
           </div>
-          <h2 className="text-3xl font-playfair font-bold text-[#D9381E]">
+          <h2 className="text-3xl font-playfair font-bold text-[#A14124]">
             Guest Wishes
           </h2>
-          <p className="text-xs text-[#D9381E]/70 font-poppins mt-1">
+          <p className="text-xs text-[#A14124]/70 font-poppins mt-1">
             Send your heartfelt prayers & wishes
           </p>
-          <div className="w-12 h-0.5 bg-[#F2A900] mx-auto mt-3" />
+          <div className="w-12 h-0.5 bg-[#CCAF8D] mx-auto mt-3" />
         </motion.div>
 
         {/* Add Wish Trigger / Form */}
@@ -77,7 +77,7 @@ export const WishesSection: React.FC = () => {
           {!showForm ? (
             <button
               onClick={() => setShowForm(true)}
-              className="w-full py-3.5 rounded-full bg-gradient-to-r from-[#D9381E] to-[#F2A900] text-white font-semibold text-xs uppercase tracking-widest flex items-center justify-center gap-2 shadow-lg active:scale-95 transition-all cursor-pointer"
+              className="w-full py-3.5 rounded-full bg-gradient-to-r from-[#A14124] to-[#CCAF8D] text-white font-semibold text-xs uppercase tracking-widest flex items-center justify-center gap-2 shadow-lg active:scale-95 transition-all cursor-pointer"
             >
               <PlusCircle className="w-4 h-4" />
               <span>Send a Blessing</span>
@@ -88,12 +88,12 @@ export const WishesSection: React.FC = () => {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
               onSubmit={handleAddWish}
-              className="bg-white border-2 border-[#F2A900] rounded-[24px] p-5 shadow-2xl"
+              className="bg-white border-2 border-[#CCAF8D] rounded-[24px] p-5 shadow-2xl"
             >
-              <h3 className="text-sm font-playfair font-bold text-[#D9381E] mb-1 text-center">
+              <h3 className="text-sm font-playfair font-bold text-[#A14124] mb-1 text-center">
                 Leave Your Blessing
               </h3>
-              <p className="text-[10px] text-[#D9381E]/70 text-center font-poppins mb-3">
+              <p className="text-[10px] text-[#A14124]/70 text-center font-poppins mb-3">
                 Your message will be sent via WhatsApp
               </p>
               <input
@@ -103,13 +103,13 @@ export const WishesSection: React.FC = () => {
                 onChange={(e) => setName(e.target.value)}
                 required
                 disabled={isSubmitting}
-                className="w-full text-xs p-2.5 rounded-xl border border-[#FFDAB9] bg-[#FFF8F0] mb-2.5 outline-none focus:border-[#D9381E] disabled:opacity-50"
+                className="w-full text-xs p-2.5 rounded-xl border border-[#CCAF8D] bg-[#FFF8F0] mb-2.5 outline-none focus:border-[#A14124] disabled:opacity-50"
               />
               <select
                 value={relation}
                 onChange={(e) => setRelation(e.target.value)}
                 disabled={isSubmitting}
-                className="w-full text-xs p-2.5 rounded-xl border border-[#FFDAB9] bg-[#FFF8F0] mb-2.5 outline-none focus:border-[#D9381E] text-[#D9381E] disabled:opacity-50"
+                className="w-full text-xs p-2.5 rounded-xl border border-[#CCAF8D] bg-[#FFF8F0] mb-2.5 outline-none focus:border-[#A14124] text-[#A14124] disabled:opacity-50"
               >
                 <option value="Family">Family Member</option>
                 <option value="Close Friend">Close Friend</option>
@@ -123,21 +123,21 @@ export const WishesSection: React.FC = () => {
                 required
                 rows={3}
                 disabled={isSubmitting}
-                className="w-full text-xs p-2.5 rounded-xl border border-[#FFDAB9] bg-[#FFF8F0] mb-3 outline-none focus:border-[#D9381E] disabled:opacity-50"
+                className="w-full text-xs p-2.5 rounded-xl border border-[#CCAF8D] bg-[#FFF8F0] mb-3 outline-none focus:border-[#A14124] disabled:opacity-50"
               />
               <div className="flex items-center gap-2">
                 <button
                   type="button"
                   onClick={() => setShowForm(false)}
                   disabled={isSubmitting}
-                  className="flex-1 py-2.5 rounded-xl border border-[#FFDAB9] text-[#D9381E] text-xs font-semibold cursor-pointer disabled:opacity-50"
+                  className="flex-1 py-2.5 rounded-xl border border-[#CCAF8D] text-[#A14124] text-xs font-semibold cursor-pointer disabled:opacity-50"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="flex-1 py-2.5 rounded-xl bg-[#D9381E] text-white text-xs font-semibold flex items-center justify-center gap-1.5 shadow-md cursor-pointer disabled:opacity-50"
+                  className="flex-1 py-2.5 rounded-xl bg-[#A14124] text-white text-xs font-semibold flex items-center justify-center gap-1.5 shadow-md cursor-pointer disabled:opacity-50"
                 >
                   {isSubmitting ? (
                     <>
