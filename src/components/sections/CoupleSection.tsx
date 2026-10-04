@@ -25,10 +25,10 @@ export const CoupleSection: React.FC = () => {
           </h2>
 
           {/* Top Gold Flower Divider */}
-          <div className="flex items-center justify-center gap-3 text-[#FF4500] mb-6">
-            <span className="h-[1px] w-12 bg-gradient-to-r from-transparent to-[#FF4500]" />
-            <Flower2 className="w-4 h-4 text-[#FF4500]" />
-            <span className="h-[1px] w-12 bg-gradient-to-l from-transparent to-[#FF4500]" />
+          <div className="flex items-center justify-center gap-3 text-[#D32F2F] mb-6">
+            <span className="h-[1px] w-12 bg-gradient-to-r from-transparent to-[#D32F2F]" />
+            <Flower2 className="w-4 h-4 text-[#D32F2F]" />
+            <span className="h-[1px] w-12 bg-gradient-to-l from-transparent to-[#D32F2F]" />
           </div>
         </motion.div>
 
@@ -38,7 +38,7 @@ export const CoupleSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           viewport={{ once: false, amount: 0.25 }}
           transition={{ duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
-          className="w-full max-w-[240px] mx-auto bg-[#FFF5EE] p-2.5 rounded-[28px] border-2 border-[#FF4500]/50 shadow-xl mb-5 relative overflow-hidden group"
+          className="w-full max-w-[240px] mx-auto bg-[#FFF5EE] p-2.5 rounded-[28px] border-2 border-[#D32F2F]/50 shadow-xl mb-5 relative overflow-hidden group"
         >
           <div className="w-full h-[310px] rounded-[22px] overflow-hidden relative border border-[rgba(212,175,55,0.3)]">
             <img
@@ -70,16 +70,16 @@ export const CoupleSection: React.FC = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 0.6 }}
-          className="flex items-center justify-center gap-3 text-[#FF4500] mb-8"
+          className="flex items-center justify-center gap-3 text-[#D32F2F] mb-8"
         >
-          <span className="h-[1px] w-12 bg-gradient-to-r from-transparent to-[#FF4500]" />
-          <Flower2 className="w-4 h-4 text-[#FF4500]" />
-          <span className="h-[1px] w-12 bg-gradient-to-l from-transparent to-[#FF4500]" />
+          <span className="h-[1px] w-12 bg-gradient-to-r from-transparent to-[#D32F2F]" />
+          <Flower2 className="w-4 h-4 text-[#D32F2F]" />
+          <span className="h-[1px] w-12 bg-gradient-to-l from-transparent to-[#D32F2F]" />
         </motion.div>
 
         {/* Family Cards Side by Side */}
         <div className="grid grid-cols-2 gap-3 text-center">
-          {/* Groom's Family Card */}
+          {/* Mann Family Card */}
           <motion.div
             initial={{ opacity: 0, x: -35, y: 25 }}
             whileInView={{ opacity: 1, x: 0, y: 0 }}
@@ -87,10 +87,10 @@ export const CoupleSection: React.FC = () => {
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
             className="bg-[#FFF5EE] border border-[rgba(212,175,55,0.3)] rounded-[24px] p-4 shadow-md flex flex-col items-center justify-center"
           >
-            <span className="text-[8px] uppercase tracking-[0.2em] text-[#FF8C00] font-bold mb-1.5 font-poppins">
-              GROOM'S FAMILY
+            <span className="text-[8px] uppercase tracking-[0.2em] text-[#D32F2F] font-bold mb-1.5 font-poppins">
+              MANN FAMILY
             </span>
-            <span className="text-xl font-calligraphy text-[#FF6347] mb-2">
+            <span className="text-xl font-calligraphy text-[#D32F2F] mb-2">
               {coupleData.groomShort}
             </span>
             <span className="text-[7px] uppercase tracking-widest text-[#FFD700]/70 font-semibold mb-1 font-poppins">
@@ -101,7 +101,7 @@ export const CoupleSection: React.FC = () => {
             </span>
           </motion.div>
 
-          {/* Bride's Family Card */}
+          {/* Rehal Family Card */}
           <motion.div
             initial={{ opacity: 0, x: 35, y: 25 }}
             whileInView={{ opacity: 1, x: 0, y: 0 }}
@@ -109,10 +109,10 @@ export const CoupleSection: React.FC = () => {
             transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
             className="bg-[#FFF5EE] border border-[rgba(212,175,55,0.3)] rounded-[24px] p-4 shadow-md flex flex-col items-center justify-center"
           >
-            <span className="text-[8px] uppercase tracking-[0.2em] text-[#FF8C00] font-bold mb-1.5 font-poppins">
-              BRIDE'S FAMILY
+            <span className="text-[8px] uppercase tracking-[0.2em] text-[#D32F2F] font-bold mb-1.5 font-poppins">
+              REHAL FAMILY
             </span>
-            <span className="text-xl font-calligraphy text-[#FF6347] mb-2">
+            <span className="text-xl font-calligraphy text-[#D32F2F] mb-2">
               {coupleData.brideShort}
             </span>
             <span className="text-[7px] uppercase tracking-widest text-[#FFD700]/70 font-semibold mb-1 font-poppins">
