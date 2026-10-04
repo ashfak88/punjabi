@@ -44,7 +44,7 @@ export default function Home() {
         <FloatingControls hasEntered={hasEntered} />
         
         {/* Audio Player for Sikh Wedding Music */}
-        <AudioPlayer audioUrl="/wedding-song.mp3" startTime={2} playTrigger={hasEntered} />
+        <AudioPlayer audioUrl="/wedding-song-cut.mp3" startTime={0} playTrigger={hasEntered} delayBeforePlay={0} />
 
         {/* Main Vertical Scrollable Experience (Sections 2 - 10 in exact order) */}
         <div

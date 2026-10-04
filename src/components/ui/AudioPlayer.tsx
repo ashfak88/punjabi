@@ -7,9 +7,10 @@ interface AudioPlayerProps {
   audioUrl: string;
   startTime?: number;
   playTrigger?: boolean;
+  delayBeforePlay?: number;
 }
 
-export const AudioPlayer: React.FC<AudioPlayerProps> = ({ audioUrl, startTime = 0, playTrigger = false }) => {
+export const AudioPlayer: React.FC<AudioPlayerProps> = ({ audioUrl, startTime = 0, playTrigger = false, delayBeforePlay = 0 }) => {
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -37,21 +38,29 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({ audioUrl, startTime = 
 
   // Handle playTrigger change
   useEffect(() => {
-    if (playTrigger && audioRef.current && !isPlaying) {
-      audioRef.current
-        .play()
-        .then(() => setIsPlaying(true))
-        .catch((err) => console.log("Playback error from trigger:", err));
+    if (playTrigger && audioRef.current) {
+      const timer = setTimeout(() => {
+        if (audioRef.current) {
+          audioRef.current.currentTime = startTime || 0;
+          audioRef.current.volume = 0.4; // Restore volume
+          audioRef.current
+            .play()
+            .then(() => setIsPlaying(true))
+            .catch((err) => console.log("Playback error from trigger:", err));
+        }
+      }, delayBeforePlay || 0);
+      return () => clearTimeout(timer);
     }
-  }, [playTrigger]);
+  }, [playTrigger, delayBeforePlay]); // Intentionally omitting startTime to fix hot-reload crash
 
   useEffect(() => {
     // Auto-play listener on first user interaction anywhere if not started
+    // We play silently to bypass browser autoplay restrictions
     const handleFirstClick = () => {
       if (audioRef.current && audioRef.current.paused && !isPlaying) {
+        audioRef.current.volume = 0; // Mute for the unlock play
         audioRef.current
           .play()
-          .then(() => setIsPlaying(true))
           .catch(() => {
             // Autoplay blocked, require explicit click on button
           });
@@ -59,14 +68,12 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({ audioUrl, startTime = 
       window.removeEventListener("click", handleFirstClick);
     };
 
-    if (!playTrigger) {
-      window.addEventListener("click", handleFirstClick);
-    }
+    window.addEventListener("click", handleFirstClick);
 
     return () => {
       window.removeEventListener("click", handleFirstClick);
     };
-  }, [isPlaying, playTrigger]);
+  }, [isPlaying, playTrigger]); // Intentionally adding playTrigger back to match the original array size
 
   const toggleAudio = (e: React.MouseEvent) => {
     e.stopPropagation();
