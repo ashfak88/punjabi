@@ -9,20 +9,20 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Ramjot & Kishandeep • Royal Wedding",
+  title: "Ramjot Kaur & Kishandeep Singh • Royal Wedding",
   description: "You are joyfully invited to the sacred Anand Karaj and Wedding Celebration of Ramjot Kaur & Kishandeep Singh on Friday, 4 December 2026.",
-  keywords: "Ramjot Kishandeep wedding, Sikh Punjabi wedding invitation, digital Anand Karaj invitation, luxury wedding app, WhatsApp digital card",
+  keywords: "Ramjot Kaur Kishandeep Singh wedding, Sikh Punjabi wedding invitation, digital Anand Karaj invitation, luxury wedding app, WhatsApp digital card",
   openGraph: {
-    title: "Ramjot & Kishandeep • Royal Wedding",
-    description: "Witness the sacred union of Ramjot & Kishandeep on Friday, 4 December 2026.",
-    url: "https://ramjot-and-kishandeep-wedding.invitation/2026",
-    siteName: "Ramjot & Kishandeep Wedding Celebration",
+    title: "Ramjot Kaur & Kishandeep Singh • Royal Wedding",
+    description: "Witness the sacred union of Ramjot Kaur & Kishandeep Singh on Friday, 4 December 2026.",
+    url: "https://ramjot-kaur-and-kishandeep-singh-wedding.invitation/2026",
+    siteName: "Ramjot Kaur & Kishandeep Singh Wedding Celebration",
     images: [
       {
         url: "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop",
         width: 1200,
         height: 630,
-        alt: "Ramjot & Kishandeep Royal Wedding Invitation",
+        alt: "Ramjot Kaur & Kishandeep Singh Royal Wedding Invitation",
       },
     ],
     locale: "en_US",

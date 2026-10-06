@@ -2,13 +2,13 @@ import { WeddingEvent, TimelineItem, FamilyMember, GalleryPhoto, WishComment, Gi
 
 export const coupleData = {
   brideName: "Ramjot Kaur",
-  brideShort: "Ramjot",
+  brideShort: "Ramjot Kaur",
   brideTitle: "Daughter of Major Singh & Ramandeep Kaur",
   brideBio: "A beautiful soul whose kindness and warmth radiate from within, bringing joy to everyone she meets.",
   bridePhoto: "",
 
   groomName: "Kishandeep Singh",
-  groomShort: "Kishandeep",
+  groomShort: "Kishandeep Singh",
   groomTitle: "Son of Mandeep Singh & Baljinder Kaur",
   groomBio: "A gentleman of great integrity and character, whose strength and gentle nature guide his every step.",
   groomPhoto: "",
@@ -31,8 +31,8 @@ export const coupleData = {
   scriptureTranslation: "They are not said to be husband and wife, who merely sit together. They alone are called husband and wife, who have one light in two bodies.",
   scriptureReference: "Guru Amar Das Ji",
 
-  shareUrl: "https://ramjot-and-kishandeep-wedding.invitation/2026",
-  whatsappShareText: "Waheguru Ji Ka Khalsa! You are cordially invited to the wedding celebration of Ramjot & Kishandeep on Friday, 4 December 2026. View our digital invitation here: https://ramjot-and-kishandeep-wedding.invitation/2026",
+  shareUrl: "https://ramjot-kaur-and-kishandeep-singh-wedding.invitation/2026",
+  whatsappShareText: "Waheguru Ji Ka Khalsa! You are cordially invited to the wedding celebration of Ramjot Kaur & Kishandeep Singh on Friday, 4 December 2026. View our digital invitation here: https://ramjot-kaur-and-kishandeep-singh-wedding.invitation/2026",
 };
 
 export const eventsData: WeddingEvent[] = [
