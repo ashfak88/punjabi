@@ -37,19 +37,6 @@ export const coupleData = {
 
 export const eventsData: WeddingEvent[] = [
   {
-    id: "sukhmani-sahib",
-    title: "Sukhmani Sahib Path",
-    subtitle: "Divine Blessings",
-    date: "Tuesday, 1 December 2026",
-    time: "10:00 AM onwards",
-    location: "",
-    address: "",
-    description: "Join us in seeking the blessings of the Almighty as we begin our wedding celebrations with the recitations of Sukhmani Sahib.",
-    dressCode: "",
-    icon: "Heart",
-    mapsUrl: ""
-  },
-  {
     id: "mehndi",
     title: "Mehndi Ceremony",
     subtitle: "Colors & Joy",
@@ -63,10 +50,23 @@ export const eventsData: WeddingEvent[] = [
     mapsUrl: ""
   },
   {
+    id: "sukhmani-sahib",
+    title: "Sukhmani Sahib Path",
+    subtitle: "Divine Blessings",
+    date: "Wednesday, 2 December 2026",
+    time: "10:00 AM onwards",
+    location: "",
+    address: "",
+    description: "Join us in seeking the blessings of the Almighty as we begin our wedding celebrations with the recitations of Sukhmani Sahib.",
+    dressCode: "",
+    icon: "Heart",
+    mapsUrl: ""
+  },
+  {
     id: "haldi-jaggo",
     title: "Haldi & Jaggo Ceremony",
     subtitle: "Golden Glow & Night of Celebration",
-    date: "Thursday, 3 December 2026",
+    date: "Wednesday, 2 December 2026",
     time: "6:00 PM onwards",
     location: "Residence of Rehal Family",
     address: "",
